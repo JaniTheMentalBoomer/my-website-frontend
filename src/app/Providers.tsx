@@ -3,7 +3,11 @@
 import { CSSReset, ChakraProvider, ThemeProvider } from '@chakra-ui/react'
 import theme from './styles/theme'
 
-export function Providers({ children }: { children: React.ReactNode }) {
+interface Props {
+  children: React.ReactNode
+}
+
+export default function Providers({ children }: Props) {
   return (
     <ChakraProvider>
       <ThemeProvider theme={theme}>

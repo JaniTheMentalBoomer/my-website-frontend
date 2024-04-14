@@ -1,13 +1,13 @@
 import { Flex, Heading } from '@chakra-ui/react'
 
-const ProjectsPage = () => {
+const GalleryPage = () => {
   return (
     <Flex padding={4} bg="blue.600">
       <Heading as="h1" noOfLines={1}>
-        Projects
+        Gallery
       </Heading>
     </Flex>
   )
 }
 
-export default ProjectsPage
+export default GalleryPage
