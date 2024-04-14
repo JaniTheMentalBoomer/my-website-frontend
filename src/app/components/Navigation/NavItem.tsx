@@ -1,4 +1,4 @@
-import { Button, Flex } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import { UrlObject } from 'url'
 
@@ -9,21 +9,26 @@ interface Props {
   closeMenu?: () => void
 }
 
-const NavItem = ({ label, href, closeMenu }: Props) => {
+const NavItem = ({ label, href, isFullWidth, closeMenu }: Props) => {
   return (
-    <Link href={href} passHref>
-      <Flex flexWrap={'wrap'}>
-        <Button
-          variant="ghost"
+    <Box
+      width={isFullWidth ? '100%' : 'auto'}
+      sx={{
+        _hover: { bg: 'green.400' },
+      }}
+    >
+      <Link href={href} passHref>
+        <Text
           aria-label={label}
-          py={1}
+          py={2}
           px={2}
           onClick={closeMenu}
+          sx={{ cursor: 'pointer' }}
         >
           {label}
-        </Button>
-      </Flex>
-    </Link>
+        </Text>
+      </Link>
+    </Box>
   )
 }
 

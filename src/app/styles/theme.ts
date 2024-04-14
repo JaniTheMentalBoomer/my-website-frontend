@@ -9,7 +9,15 @@ const theme = extendTheme({
     mono: 'Menlo, monospace',
   },
   components: {
-    container: {},
+    Container: {},
+    Heading: {},
+    Text: {
+      baseStyle: {
+        fontSize: '20px',
+        wordBreak: 'break-word',
+        overflowWrap: 'break-word',
+      },
+    },
     Button: {
       // 1. We can update the base styles
       baseStyle: {
