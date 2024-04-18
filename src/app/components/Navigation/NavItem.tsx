@@ -14,7 +14,7 @@ const NavItem = ({ label, href, isFullWidth, closeMenu }: Props) => {
     <Box
       width={isFullWidth ? '100%' : 'auto'}
       sx={{
-        _hover: { bg: 'green.400' },
+        _hover: { bg: 'navigation.main' },
       }}
     >
       <Link href={href} passHref>

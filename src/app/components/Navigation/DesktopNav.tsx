@@ -2,11 +2,11 @@ import { Flex } from '@chakra-ui/react'
 import NavItem from './NavItem'
 import Logo from './Logo'
 
-const NavigationBar = () => {
+const DesktopNav = () => {
   return (
     <Flex
       w="100vw"
-      bgColor="green.100"
+      bg="navigation.main"
       pos="static"
       p={2}
       flexDir="row"
@@ -26,4 +26,4 @@ const NavigationBar = () => {
   )
 }
 
-export default NavigationBar
+export default DesktopNav

@@ -6,7 +6,7 @@ interface Props {
 
 const MainContent = ({ children }: Props) => {
   return (
-    <Box px={4} width={'100vw'} tabIndex={-1}>
+    <Box width={'100vw'} minHeight={'100vh'}>
       {children}
     </Box>
   )

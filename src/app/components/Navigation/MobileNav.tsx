@@ -17,7 +17,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Sidebar = () => {
+const MobileNav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const drawerSize = useBreakpointValue({ base: 'full', md: 'xs' })
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
   return (
     <Flex
       w="100vw"
-      bgColor="green.100"
+      bgColor="navigation.main"
       pos="sticky"
       p={2}
       flexDir="row"
@@ -42,6 +42,7 @@ const Sidebar = () => {
           size="lg"
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           onClick={onOpen}
+          variant="whiteGhost"
         />
       </Flex>
       <Drawer
@@ -53,7 +54,7 @@ const Sidebar = () => {
         closeOnOverlayClick
       >
         <DrawerOverlay />
-        <DrawerContent sx={{ bg: 'green.200' }}>
+        <DrawerContent sx={{ bg: 'navigation.secondary' }}>
           <DrawerBody>
             <Flex direction={'row'} justify={'space-between'}>
               <Link href={'/'} passHref>
@@ -66,7 +67,7 @@ const Sidebar = () => {
                   />
                 </Button>
               </Link>
-              <DrawerCloseButton size={'lg'} sx={{}} />
+              <DrawerCloseButton size={'lg'} />
             </Flex>
             <Flex
               direction={'column'}
@@ -100,4 +101,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default MobileNav
